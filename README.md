@@ -1,4 +1,5 @@
 # BASH Framework Project
+![thumbnail of BASH framework](https://github.com/latenighthackathon/bash-framework/blob/main/.github/img/bash-framework.png)
 
 ## Overview
 
@@ -6,17 +7,28 @@ An intelligent coding agent framework for building robust automations using the 
 
 ## Philosophy
 
-The BASH framework is built on a core principle: **AI handles reasoning, code handles execution**. This decoupling creates a system that is both effective and reliable by:
+The BASH framework is built on a core principle: **AI handles reasoning, code handles execution**. 
+![thumbnail detailing separation of concerns](https://github.com/latenighthackathon/bash-framework/blob/main/.github/img/aivscode.png)
+
+This decoupling creates a system that is both effective and reliable by:
 
 - Eliminating compounding errors from sequential AI tasks
 - Providing deterministic, testable execution layers
 - Maintaining clear audit trails and context preservation
 - Enabling continuous learning and improvement
 
+Note:
+
+In LLM-only solutions, assuming your AI agent is 90% successful in processing each step, after 5 consecutive steps, accuracy and success rates can plummet to 59%. By ensuring all tasks are handled by predictable, deterministic code/scripts, we reduce the impact of compounding errors by the overall system.
+
+![thumbnail detailing blueprints](https://github.com/latenighthackathon/bash-framework/blob/main/.github/successfalloff.png)
+
 ## Architecture
 
 ### Layer 1: Blueprints (Workflow SOPs)
 **Location:** `blueprints/`
+
+![thumbnail detailing blueprints](https://github.com/latenighthackathon/bash-framework/blob/main/.github/blueprints.png)
 
 Markdown-based Standard Operating Procedures that serve as the source of truth for workflows. Each blueprint defines:
 - Objective
@@ -27,6 +39,9 @@ Markdown-based Standard Operating Procedures that serve as the source of truth f
 - Validation criteria
 
 ### Layer 2: Agents (The Orchestrator)
+
+![thumbnail detailing agents](https://github.com/latenighthackathon/bash-framework/blob/main/.github/agents.png)
+
 The AI reasoning engine responsible for:
 - Reading context and selecting appropriate scripts/blueprints
 - Executing scripts in correct sequence
@@ -37,6 +52,8 @@ The AI reasoning engine responsible for:
 ### Layer 3: Scripts (Deterministic Execution)
 **Location:** `scripts/`
 
+![thumbnail detailing scripts](https://github.com/latenighthackathon/bash-framework/blob/main/.github/scripts.png)
+
 Python scripts that handle all deterministic operations:
 - Atomic and modular (one responsibility per script)
 - Clear success/failure messaging via stdout/stderr
@@ -46,6 +63,8 @@ Python scripts that handle all deterministic operations:
 
 ### Layer 4: History (The Changelog)
 **Location:** `history/changelog.md`
+
+![thumbnail detailing blueprints](https://github.com/latenighthackathon/bash-framework/blob/main/.github/history.png)
 
 System-wide version tracking using semantic versioning:
 - **Major (X.0.0):** Breaking changes requiring Blueprint/script updates
@@ -66,17 +85,14 @@ requirements.txt   # Python dependencies
 
 ## Getting Started
 
-### Prerequisites
+### Recommended Setup:
 
-```bash
-python3 -m pip install -r requirements.txt
-```
+VS Studio Code + Claude Code extension OR
+Claude Code/Claude Code CLI
 
-### Environment Setup
-
-1. Copy `.env.example` to `.env`
-2. Add your API keys and credentials to `.env`
-3. Never commit `.env` or credential files to version control
+1. In your project folder, simply copy/paste the contents from the provided `claude.md` file in this repo into your claude.md file. Save your changes.
+2. In VS Studio Code -> Claude Code chat (Or in Claude Code), type in "initialize this project based on my updated claude.md file"
+3. Once setup is complete, you're ready to ask Claude to build your desired automation!
 
 ## Usage
 
@@ -91,17 +107,22 @@ The Agent (AI) orchestrates the system by:
 ## Development Principles
 
 ### Prioritize Reuse Over Creation
+
 Before creating new scripts:
 1. Audit `scripts/` for existing capabilities
 2. Refactor near-matches rather than duplicating
 3. Only create new scripts when no alternative exists
 
 ### Debug Systematically
+
+![thumbnail detailing blueprints](https://github.com/latenighthackathon/bash-framework/blob/main/.github/selfrepairloop.png)
+
 When failures occur:
-1. **Analyze:** Read full traceback to identify root cause
+1. **Diagnose:** Read full traceback to identify root cause
 2. **Fix:** Patch the script
-3. **Record:** Log error and solution in changelog
-4. **Update:** Amend relevant Blueprint to prevent recurrence
+3. **Verify:** Run test execution and validate that the patch works
+4. **Standardize and Document:** Update appropriate SOPs in `blueprints/`
+4. **Log:** Create date-stamped update in `history/changelog.md`
 
 ### Maintain Living Workflows
 Blueprints are persistent assets:
