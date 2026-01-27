@@ -23,7 +23,7 @@ In LLM-only solutions, assuming your AI agent is 90% successful in processing ea
 
 ![thumbnail detailing blueprints](/.github/img/successfalloff.png)
 
-By ensuring all tasks are handled by predictable, deterministic code/scripts, we reduce the impact of compounding errors by the overall system.
+By ensuring all tasks are handled by predictable, deterministic code/scripts, we reduce the impact of compounding errors by the overall system. Further, by offloading task execution to dedicated task-specific scripts, we help reduce the total token expedeture compared to LLM-only solutions.
 
 ## Architecture
 
@@ -46,7 +46,7 @@ Markdown-based Standard Operating Procedures that serve as the source of truth f
 
 ![thumbnail detailing agents](/.github/img/agents.png)
 
-The AI reasoning engine responsible for:
+The Agent serves as the reasoning engine and is responsible for:
 - Reading context and selecting appropriate scripts/blueprints
 - Executing scripts in correct sequence
 - Handling ambiguity and edge cases
