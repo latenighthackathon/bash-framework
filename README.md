@@ -156,4 +156,4 @@ Track code changes made by the agent(s) in `history/changelog.md` for detailed v
 
 ## License
 
-[MIT License](https://github.com/latenighthackathon/bash-framework/blob/main/LICENSE). Copyright (c) 2026
+[Zero-Clause BSD](https://github.com/latenighthackathon/bash-framework/blob/main/LICENSE). Copyright (c) 2026
