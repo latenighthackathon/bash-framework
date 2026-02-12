@@ -3,7 +3,7 @@
 
 ## Overview
 
-An intelligent coding agent framework for building robust automations using the BASH Framework (Blueprints, Agents, Scripts, History) - an architecture that enforces a clear separation of concerns between AI-driven probabilistic reasoning and deterministic code execution.
+An intelligent coding agent framework for building robust automations using the BASH Framework (Blueprints, Agents, Skills, History) - an architecture that enforces a clear separation of concerns between AI-driven probabilistic reasoning and deterministic code execution.
 
 ## Philosophy
 
