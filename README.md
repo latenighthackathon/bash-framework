@@ -80,7 +80,7 @@ System-wide version tracking using semantic versioning:
 ```
 .tmp/               # Temporary/disposable intermediate files
 blueprints/         # Workflow SOPs in Markdown
-scripts/            # Deterministic Python scripts
+skills/            # Deterministic Python scripts & Claude Skills
 history/            # Changelog and persistent system records
 deliverables/       # Final outputs
 .env               # API keys and environment variables (gitignored)
@@ -104,16 +104,16 @@ The Agent (AI) orchestrates the system by:
 
 1. **Reading the request** - Understanding user intent
 2. **Selecting or Creating the `blueprints/`** - Choosing the appropriate Blueprint SOP, or creating one if it does not exist yet
-3. **Executing or Creating the `scripts/`** - Running deterministic operations in sequence, or creating the scripts if the capability does not exist yet
+3. **Executing or Creating the `skills/`** - Running deterministic operations in sequence, or creating the scripts if the capability does not exist yet
 4. **Verifying outputs** - Checking results against expected criteria
 5. **Logging changes** - Recording evolution in changelog
 
 ### Prioritize Reuse Over Creation
 
-Before creating new scripts:
-1. Audit `scripts/` for existing capabilities
+Before creating new Skills:
+1. Audit `skills/` for existing capabilities
 2. Refactor near-matches rather than duplicating
-3. Only create new scripts when no alternative exists
+3. Only create new skills when no alternative exists
 
 ### Debug Systematically, Patch, Log
 
