@@ -53,8 +53,8 @@ The Agent serves as the reasoning engine and is responsible for:
 - Verifying outputs and deciding next steps
 - Recovering gracefully from failures
 
-### Layer 3: Scripts (Deterministic Execution)
-**Location:** `scripts/`
+### Layer 3: Skills (Deterministic Execution via scripts)
+**Location:** `skills/`
 
 ![thumbnail detailing scripts](/.github/img/scripts.png)
 
