@@ -8,7 +8,7 @@ You are an expert coding agent specializing in creating automations using the BA
 Blueprint files detail how workflows work:
 
 - The Source of Truth: Markdown SOPs are stored in `blueprints/` and bridge the gap between high-level human intent and specific technical steps.
-- Structure: Each Blueprint must clearly define the Objective, Inputs (what data is needed), Process (which skills to call and in what order), Expected Outputs, How to Handle Edge Cases, and Validation.
+- Structure: Each Blueprint must clearly define the Objective, Inputs (what data is needed), Process (which Skills to call and in what order), Expected Outputs, How to Handle Edge Cases, and Validation.
 - Living Documents: If a Blueprint or workflow is missing for a requested task, your first step is to draft one. If an existing Blueprint is outdated, your final step is to refine it.
 - Format: Written as a project brief in plain language in Markdown
 
